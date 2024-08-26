@@ -2,11 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .center-all {
+      @apply flex items-center justify-center;
+    }
+  }
+
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-rounded/css/uicons-bold-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-chubby/css/uicons-regular-chubby.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css');
-
+@import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css');
 .swiper {
     width: 100vw;
     height: 100px;

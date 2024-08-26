@@ -105,14 +105,14 @@ export default function IconsList() {
     return (
         <div className='my-6'>
             <Slider>
-                {icon_list.map((icons, index) => {
-                    return <SwiperSlide>
+                {icon_list.map((icons, index) => 
+                   <SwiperSlide>
                         <div className="flex flex-col items-center pb-2 hover:border-b-2 border-light ">
                             {icons.icon}
                             <h1 className="text-sm">{icons.title}</h1>
                         </div>                        
                     </SwiperSlide>
-                })}
+                )}
             </Slider>
         </div>
     )

@@ -21,7 +21,7 @@ const searchElement = [
     {
         title: 'Who',
         placeHolder: 'Add Guests',
-        width: '300'        
+        width: '300'
     }
 ]
 
@@ -58,7 +58,7 @@ export default function Navbar() {
             <div className='mt-10 h-[65px] mx-auto shadow-lg rounded-full border-[1px] border-shadow flex overflow-hidden '>
                 {
                     searchElement.map((element) => (
-                        
+
                         <div key={element.title} className={`h-full cursor-pointer hover:bg-shadow px-5 flex flex-col justify-center rounded-full`} style={{ width: `${element.width}px` }}>
                             <h1 className='text-base'>{element.title}</h1>
                             <p className='text-sm text-light'>{element.placeHolder}</p>
@@ -67,9 +67,9 @@ export default function Navbar() {
                 }
             </div>
             {/* Modal code here */}
-            <Modal backgroudClose={true} closeBtn={true}>
+            <Modal classNames="h-[80%] max-w-[80%]" modal_id="my_modal_1">
                 <h3 className="text-5xl font-bold">Hello!</h3>
-                <p className="py-4">Press ESC key or click outside to close</p>
+                <p className="py-4">It's Modal from navbar</p>
             </Modal>
         </nav>
     )
