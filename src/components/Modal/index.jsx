@@ -1,18 +1,19 @@
 import React from 'react'
 
-export default function Modal({ children, backgroudClose, closeBtn }) {
-    console.log(backgroudClose)
+export default function Modal({ children, classNames, modal_id }) {
     return (
-        <dialog id="my_modal_1" className="w-full modal">
-            <div className="h-[80%] max-w-[80%] modal-box">
-                {closeBtn && <form method="dialog">
-                    <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
+        <dialog id={modal_id} className="w-full modal">
+            <div className={"modal-box "+classNames}>
+                    {true && <form method="dialog">
+                        <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
+                    </form>}
+                    {children}
+
+                </div>
+                {true && <form method="dialog" className="modal-backdrop ">
+                    <button>close</button>
                 </form>}
-                {children}
-            </div>
-            {backgroudClose && <form method="dialog" className="modal-backdrop ">
-                <button>close</button>
-            </form>}
+              
         </dialog>
     )
 }
