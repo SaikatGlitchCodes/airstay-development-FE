@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from '../Modal'
 import DropDown from '../shared/dropDown'
+import { Link } from 'react-router-dom'
 
 const searchElement = [
     {
@@ -27,11 +28,11 @@ const searchElement = [
 
 export default function Navbar() {
     return (
-        <nav className="flex flex-col justify-center px-16 py-8 font-sans border-b-2 border-shadow">
+        <nav  className="flex flex-col justify-center px-16 py-8 font-sans border-b-2 border-shadow">
             <div className='h-[16px] flex items-center justify-between'>
-                <div className="flex items-center brand text-airstay-red">
+                <Link to='/' className="flex items-center brand text-airstay-red">
                     <i className="text-4xl fi fi-brands-airbnb"></i> <h1 className='text-2xl font-semibold ms-1'>airstay</h1>
-                </div>
+                </Link>
                 <div className='flex w-[180px] text-lg items-start justify-between'>
                     <h1>Stays</h1>
                     <h1>Experiences</h1>

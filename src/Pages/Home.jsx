@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import IconsList from '../components/Home/IconsList'
 import Card from '../components/Card'
 
@@ -46,8 +45,7 @@ const cardData = [
 
 export default function Home() {
   return (
-    <div>
-        <Navbar/>
+    <div >
         <IconsList/>
         <div className="flex flex-wrap p-12 gap-7">
           {

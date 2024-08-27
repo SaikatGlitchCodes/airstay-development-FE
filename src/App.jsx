@@ -1,6 +1,9 @@
 import React from "react";
 import logo from './assests/images/airbnb.png'
 import Home from "./Pages/Home";
+import About from "./Pages/About";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./Pages/Layout";
 
 document.title = "Airbnb | Holiday rentals, Hotels, Rooms, Experiences and more...";
 let link = document.querySelector("link[rel~='icon']");
@@ -12,8 +15,19 @@ if (!link) {
 link.href = logo;
 document.body.setAttribute('data-theme','light')
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Layout> <Home/> </Layout>,
+    },
+    {
+        path: "/about",
+        element: <Layout><About /></Layout> ,
+    }
+])
+
 export function App(){
     return (
-        <Home/>
+        <RouterProvider router={router} />
     )
 }
