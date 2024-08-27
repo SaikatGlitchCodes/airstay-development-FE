@@ -1,10 +1,12 @@
 import React from 'react'
 import Modal from '../Modal'
+import { Link } from 'react-router-dom';
+
 export default function Card({card}) {
     const {title, description, image, price, live} = card;
     return (
         <>
-        <div className="w-[300px] overflow-hidden">
+        <Link to='/about' className="w-[300px] block overflow-hidden">
         <div className='h-[300px] w-[300px] rounded-xl mb-4 bg-airstay-red relative overflow-hidden'>
             <img className='absolute object-cover w-full h-full' src={image} alt={title} />
             <div className='flex p-4'>
@@ -17,7 +19,7 @@ export default function Card({card}) {
             <h1> {title} </h1>
             <p className='text-light'>{description}</p>
         <p> ₹{price} per person </p>
-        </div>
+        </Link>
         <Modal classNames="h-[400px] max-w-[600px]" modal_id="my_modal_2">
                     <h3 className="text-5xl font-bold">Hello!</h3>
                     <p className="py-4">Let's share the data</p>
