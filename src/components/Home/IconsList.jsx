@@ -106,7 +106,7 @@ export default function IconsList() {
         <div className='my-6'>
             <Slider>
                 {icon_list.map((icons, index) => 
-                   <SwiperSlide>
+                   <SwiperSlide key={index}>
                         <div className="flex flex-col items-center pb-2 hover:border-b-2 border-light ">
                             {icons.icon}
                             <h1 className="text-sm">{icons.title}</h1>
