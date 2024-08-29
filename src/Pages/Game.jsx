@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import baba from '../assests/images/baba.gif';
 import firehero from '../assests/images/firehero.gif';
 import dancer from '../assests/images/dancer.gif';
-import dudu_dance from '../assests/images/dudu_dance.gif';
 
 
 export default function Game() {
@@ -27,7 +26,6 @@ export default function Game() {
           <option value={baba}>baba</option>
           <option value={firehero}>firehero</option>
           <option value={dancer}>dancer</option>
-          <option value={dudu_dance}>dudu_dance</option>
         </select>
       </div>
       <div className='flex justify-center'><i onClick={() => { setPosition({ ...position, y: position.y - 20 }) }} className="text-6xl fi fi-ss-angle-square-up" ></i>
