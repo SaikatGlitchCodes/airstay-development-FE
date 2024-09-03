@@ -5,7 +5,7 @@ import dancer from '../assests/images/dancer.gif';
 
 
 export default function Game() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0, rotate: 0 });
   const [Rightface, setRightface] = useState(true);
   const [character, setCharacter] = useState(baba);
   
@@ -20,9 +20,9 @@ export default function Game() {
   return (
     <div className="w-[100vw] h-[100vh] game_screen ">
       <div className='h-[500px] w-[900px] mb-3 rounded-md bg-shadow m-auto overflow-hidden relative'>
-        <img src={character} className='h-40' style={{ marginLeft: position.x, marginTop: position.y, transform: Rightface ? '' : 'scaleX(-1)' }} />
-        <select  onChange={e=> setCharacter(e.target.value)} className="w-[200px] h-5 select absolute right-2 top-2 ">
-          <option disabled selected>Choose your character saaar!!</option>
+        <img src={character} className='h-40' style={{ marginLeft: position.x, marginTop: position.y, transform: Rightface ? '' : 'scaleX(-1)', transform:`rotate(${position.rotate}deg)` }} />
+        <select onChange={e=> setCharacter(e.target.value)} className="w-[200px] h-5 select absolute right-2 top-2 ">
+          <option disabled selected>Choose your character !!</option>
           <option value={baba}>baba</option>
           <option value={firehero}>firehero</option>
           <option value={dancer}>dancer</option>

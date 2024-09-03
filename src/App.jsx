@@ -5,6 +5,7 @@ import About from "./Pages/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Pages/Layout";
 import Game from "./Pages/Game";
+import CreateHotel from "./Pages/CreateHotel";
 
 document.title = "Airbnb | Holiday rentals, Hotels, Rooms, Experiences and more...";
 let link = document.querySelector("link[rel~='icon']");
@@ -28,6 +29,12 @@ const router = createBrowserRouter([
     {
         path: '/game',
         element: <Game/>
+    },
+    {
+        path: '/createHotel',
+        element: <Layout>
+            <CreateHotel/>
+        </Layout>
     }
 ])
 

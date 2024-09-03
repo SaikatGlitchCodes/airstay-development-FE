@@ -1,4 +1,4 @@
-import React from 'react'
+const React = require('react');
 
 export default function About() {
   return (
